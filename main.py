@@ -35,7 +35,7 @@ if __name__ == "__main__":
                 continue
             cmd = "0x" + cmd
             cmd = eval(cmd)  # make it a integer
-            runner(cmd)
+            runner(cmd, 1)
 
     elif choose.split()[0].lower() == "debug":
         while True:

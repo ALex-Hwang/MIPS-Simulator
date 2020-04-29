@@ -25,11 +25,11 @@ def debugger(cmd):
             exit(0)
         print("The instructions in your memory is shown below:")
         for item in MIPS_r.Memory:
-            MIPS_r.runner(eval("0x" + item))
+            MIPS_r.runner(eval("0x" + item), 0)
     elif cmd == "a":
         ins = input("Enter the instruction you want to write into your memory:")
         MIPS_r.Memory.append(ins)
         MIPS_r.pc += 1
     elif cmd == "t":
-        MIPS_r.runner(eval("0x" + MIPS_r.Memory[MIPS_r.pc - 1]))
+        MIPS_r.runner(eval("0x" + MIPS_r.Memory[MIPS_r.pc - 1]), 1)
         MIPS_r.pc += 1
